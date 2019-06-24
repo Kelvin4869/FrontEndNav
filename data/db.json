@@ -2,14 +2,14 @@
   {
     "Category_id": "baseLearn",
     "category_CN": "学习资源",
-    "category_icon": "icon-xuexi",
+    "category_icon": "icon-xuexizhongxin",
     "category_item": "baseLearnItem",
     "item_children": [
       {
-        "child_name": "Hulkye's 前端笔记本",
-        "img_src": "./img/Hulkye.png",
-        "a_href": "https://hulkye.github.io/Docs/",
-        "child_desc": "个人的前端学习笔记本,记录些许"
+        "child_name": "Kelvin's 前端笔记本",
+        "img_src": "./img/personHead.png",
+        "a_href": "https://www.kelvin4869.top/",
+        "child_desc": "个人的前端学习笔记本,记录些许有用的代码"
       },
       {
         "child_name": "Mozilla 开发者网络",
@@ -154,7 +154,7 @@
   {
     "Category_id": "apiDoc",
     "category_CN": "文档API",
-    "category_icon": "icon-icon_bangzhuwendang",
+    "category_icon": "icon-wendang",
     "category_item": "apiDocItem",
     "item_children": [
       {
@@ -240,7 +240,7 @@
   {
     "Category_id": "portalsCommunity",
     "category_CN": "门户&社区",
-    "category_icon": "icon-songmenhuwangzhan",
+    "category_icon": "icon-gaiicon-",
     "category_item": "portalsCommunityItem",
     "item_children": [
       {
@@ -392,7 +392,7 @@
   {
     "Category_id": "organization",
     "category_CN": "组织团队",
-    "category_icon": "icon-zuzhi",
+    "category_icon": "icon-shequ",
     "category_item": "organizationItem",
     "item_children": [
       {
@@ -484,7 +484,7 @@
   {
     "Category_id": "framework",
     "category_CN": "框架类库",
-    "category_icon": "icon-iframetianjia",
+    "category_icon": "icon-kuangjia",
     "category_item": "frameworkItem",
     "item_children": [
       {
@@ -576,7 +576,7 @@
   {
     "Category_id": "UIFrame",
     "category_CN": "UI框架",
-    "category_icon": "icon-ui",
+    "category_icon": "icon-UIsheji",
     "category_item": "UIFrameItem",
     "item_children": [
       {
@@ -686,7 +686,7 @@
   {
     "Category_id": "JavaScriptAbout",
     "category_CN": "JavaScript相关",
-    "category_icon": "icon-js",
+    "category_icon": "icon-java-script",
     "category_item": "JavaScriptAboutItem",
     "item_children": [
       {
@@ -736,7 +736,7 @@
   {
     "Category_id": "cssAbout",
     "category_CN": "CSS相关",
-    "category_icon": "icon-socialcss3outline",
+    "category_icon": "icon-css",
     "category_item": "cssAboutItem",
     "item_children": [
       {
@@ -888,7 +888,7 @@
   {
     "Category_id": "codeSource",
     "category_CN": "代码素材/片段",
-    "category_icon": "icon-daima",
+    "category_icon": "icon-code",
     "category_item": "codeSourceItem",
     "item_children": [
       {
@@ -974,7 +974,7 @@
   {
     "Category_id": "templatePlug",
     "category_CN": "模板插件",
-    "category_icon": "icon-chajian2",
+    "category_icon": "icon-moban",
     "category_item": "templatePlugItem",
     "item_children": [
       {
@@ -1132,7 +1132,7 @@
   {
     "Category_id": "graphical",
     "category_CN": "可视化",
-    "category_icon": "icon-tubiao",
+    "category_icon": "icon-keshihua",
     "category_item": "graphicalItem",
     "item_children": [
       {
@@ -1182,7 +1182,7 @@
   {
     "Category_id": "buildTools",
     "category_CN": "编译&构建&打包",
-    "category_icon": "icon-goujian",
+    "category_icon": "icon-dabao",
     "category_item": "buildToolsItem",
     "item_children": [
       {
@@ -1268,7 +1268,7 @@
   {
     "Category_id": "ide",
     "category_CN": "编辑器/IDE",
-    "category_icon": "icon-shebeikaifa",
+    "category_icon": "icon-gongju",
     "category_item": "ideItem",
     "item_children": [
       {
@@ -1318,7 +1318,7 @@
   {
     "Category_id": "fontIco",
     "category_CN": "字体图标",
-    "category_icon": "icon-font",
+    "category_icon": "icon-zitifont4",
     "category_item": "fontIcoItem",
     "item_children": [
       {
@@ -1580,7 +1580,7 @@
   {
     "Category_id": "vueEcology",
     "category_CN": "Vue生态",
-    "category_icon": "icon-vuejs1",
+    "category_icon": "icon-Vue",
     "category_item": "vueEcologyItem",
     "item_children": [
       {
@@ -1732,7 +1732,7 @@
   {
     "Category_id": "miniProgram",
     "category_CN": "小程序相关",
-    "category_icon": "icon-xiaochengxu1",
+    "category_icon": "icon-xiaochengxu",
     "category_item": "miniProgramItem",
     "item_children": [
       {
@@ -1794,7 +1794,7 @@
   {
     "Category_id": "blog",
     "category_CN": "大牛博客",
-    "category_icon": "icon-fanshe",
+    "category_icon": "icon-xieboke",
     "category_item": "blogItem",
     "item_children": [
       {
@@ -1949,7 +1949,7 @@
   {
     "Category_id": "aidedDevTools",
     "category_CN": " 辅助开发工具",
-    "category_icon": "icon-hebingxingzhuang-",
+    "category_icon": "icon-gongju",
     "category_item": "aidedDevToolsItem",
     "item_children": [
       {
@@ -2029,7 +2029,7 @@
   {
     "Category_id": "otherTools",
     "category_CN": " 其他工具",
-    "category_icon": "icon-gongju1",
+    "category_icon": "icon-gongju",
     "category_item": "otherToolsItem",
     "item_children": [
       {
@@ -2109,7 +2109,7 @@
   {
     "Category_id": "conference",
     "category_CN": "前端大会",
-    "category_icon": "icon-shequjiaozhengju",
+    "category_icon": "icon-huizong",
     "category_item": "conferenceItem",
     "item_children": [
       {
@@ -2153,7 +2153,7 @@
   {
     "Category_id": "contentManagement",
     "category_CN": "内容管理",
-    "category_icon": "icon-navneirongguanli",
+    "category_icon": "icon-neirongguanli",
     "category_item": "contentManagementItem",
     "item_children": [
       {
@@ -2221,7 +2221,7 @@
   {
     "Category_id": "someWebsite",
     "category_CN": "一些网站",
-    "category_icon": "icon-wangzhanguanli",
+    "category_icon": "icon-qita",
     "category_item": "someWebsiteItem",
     "item_children": [
       {
@@ -2283,7 +2283,7 @@
   {
     "Category_id": "environment",
     "category_CN": "作业环境",
-    "category_icon": "icon-aixin",
+    "category_icon": "icon-kaifahuanjingxinxi",
     "category_item": "environmentItem",
     "item_children": [
       {
