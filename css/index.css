@@ -12,6 +12,18 @@ body {
   font-family: PingFangSC-Regular, Helvetica Neue, Microsoft Yahei, 微软雅黑;
 }
 
+.frontEndContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .frontEndContainer .leftNavBar .navBar {
   font-family: 'Helvetica Neue';
   font-style: normal;
@@ -20,7 +32,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: fixed;
-  z-index: 999;
   top: 0;
   left: 0;
   width: 60px;
@@ -47,6 +58,7 @@ body {
   border-radius: 0 30px 30px 0;
   margin: 0 10px 0 0;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .frontEndContainer .leftNavBar ul li a {
@@ -116,57 +128,88 @@ body {
 }
 
 .frontEndContainer .mainContent {
-  margin-left: 60px;
+  width: 1220px;
   padding: 30px;
 }
 
 .frontEndContainer .mainContent .contentBox {
   background-color: #fff;
   padding: 20px;
+  padding-right: 0;
+  margin-bottom: 20px;
 }
 
 .frontEndContainer .mainContent .contentBox .boxTitle {
   font-size: 20px;
 }
 
-.frontEndContainer .mainContent .contentBox .boxItem {
+.frontEndContainer .mainContent .contentBox .boxContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.frontEndContainer .mainContent .contentBox .boxContent .boxItem {
   border-radius: 6px;
   background: #fff;
   padding: 10px;
-  width: 22%;
+  width: 250px;
   min-width: 200px;
-  margin: 22px 0 0 0;
+  margin: 22px 22px 0 0;
+  float: left;
   overflow: hidden;
   border: 1px solid #e4ecf3;
   -webkit-box-shadow: 1px 2px 3px #f2f6f8;
           box-shadow: 1px 2px 3px #f2f6f8;
 }
 
-.frontEndContainer .mainContent .contentBox .boxItem a {
+.frontEndContainer .mainContent .contentBox .boxContent .boxItem a {
   text-decoration: none;
 }
 
-.frontEndContainer .mainContent .contentBox .boxItem a .itemImg img {
-  width: 50px;
-  height: 50px;
+.frontEndContainer .mainContent .contentBox .boxContent .boxItem a .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.frontEndContainer .mainContent .contentBox .boxItem a .itemDes {
+.frontEndContainer .mainContent .contentBox .boxContent .boxItem a .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.frontEndContainer .mainContent .contentBox .boxContent .boxItem a .logo .itemTitle {
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  color: #3273dc;
+}
+
+.frontEndContainer .mainContent .contentBox .boxContent .boxItem a .itemDes {
   color: gray;
   font-size: 12px;
   line-height: 17px;
   padding: 10px 0;
   height: 44px;
-  text-overflow: -o-ellipsis-lastline;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-overflow: -o-ellipsis-lastline;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }
 
-.frontEndContainer .mainContent .contentBox .boxItem:hover {
+.frontEndContainer .mainContent .contentBox .boxContent .boxItem:hover {
   transform: translateY(-6px);
   -webkit-transform: translateY(-6px);
   -moz-transform: translateY(-6px);
