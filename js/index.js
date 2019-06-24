@@ -1,62 +1,3 @@
-// (function ($) {
-// 	$.fn.ssMenu = function (options) {
-
-// 		var setting = $.extend({
-// 			theme: "default", //put the name of theme in string       
-// 			hideOnScroll: false, //true to hide menu while scroll down 
-// 			additionalCSS: ({
-// 				'background': '', //custom background color
-// 				'color': '', //custom text color 
-// 				'boxShadow': '', //to add box shadow 
-// 				'textShadow': '', //to add text shadow 
-// 			}),
-
-// 		}, options);
-
-// 		return this.each(function () {
-// 			var target = $(this);
-// 			var ssMenu = $(".navBar");
-// 			var Triggers = $(ssMenu).find("li");
-// 			//Applying customizations 
-// 			$(target).addClass(setting.theme);
-// 			$(target).css(setting.additionalCSS);
-// 			$(Triggers).mouseenter(function () {
-// 				//to avoid the adding classes again and again 
-// 				if ($(ssMenu).hasClass("open")) {
-// 					return;
-// 				}
-// 				$(ssMenu).addClass("open");
-// 			});
-// 			$(Window).click(function (e) {
-// 				if ($(e.target).closest(Triggers).length) {
-// 					return;
-// 				}
-// 				$(ssMenu).removeClass("open");
-// 			});
-// 			if (setting.hideOnScroll == true) {
-// 				$(window).scroll(function () {
-// 					if ($(this).scrollTop() > 50) {
-// 						$(ssMenu).removeClass("show").addClass("hide");
-// 					} else {
-// 						$(ssMenu).removeClass("hide").addClass("show");
-// 					}
-// 				});
-// 			}
-// 		});
-// 	};
-
-// 	// 监听左侧导航栏事件
-// 	$(document).ready(function () {
-//     $(".navBar").ssMenu();
-// 	});
-	
-// 	// $.getJSON('../data/db.json', res => {
-//   //     console.log(res);
-//   //   }
-//   // )
-
-// })(jQuery);
-
 window.isClick = false
 
 $(function() {
@@ -113,11 +54,10 @@ $(function() {
 
 
 	// ===========================页面加载进度条==============================
-  // NProgress.start()
-  // NProgress.configure({ easing: 'ease', speed: 500 })
+  NProgress.start()
+  NProgress.configure({ easing: 'ease', speed: 500 })
 
-	// ============================数据请求业务==============================
-	// $("body").append(test);
+	// ============================数据请求业务===============================
   $.getJSON(
     './data/db.json',
     res => {
@@ -148,34 +88,36 @@ $(function() {
   )
 
   // ================================点击导航事件================================
-  // $('#category').on('click', 'li', function() {
-  //   // 当前处在点击状态
-  //   isClick = true;
-  //   $('#category li').each(function() {
-  //     $(this).removeClass('active')
-  //   })
-  //   $(this).addClass('active')
-  //   // 获取当前楼层名
-  //   var floorId = $(this).attr('id')
-  //   var floorName = floorId + 'Item'
-  //   // 获取楼层高度
-  //   var floorTop = $('#' + floorName).offset().top - 40
-  //   // console.log(floorTop);
-  //   $('html,body')
-  //     .stop()
-  //     .animate(
-  //       {
-  //         scrollTop: floorTop
-  //       },
-  //       800,
-  //       'linear',
-  //       function () {
-  //         setTimeout(function () {
-  //           isClick = false;
-  //         },800)
-  //       }
-  //     )
-  // })
+  $('#navBar').on('click', 'li', function() {
+    // 当前处在点击状态
+    isClick = true;
+    // $('#navBar li').each(function() {
+    //   $(this).removeClass('active')
+    // })
+		// $(this).addClass('active')
+		console.log(this);
+    // 获取当前楼层名
+    var floorId = $(this).attr('id');
+		var floorName = floorId + 'Item';
+		console.log(floorName);
+    // 获取楼层高度
+		var floorTop = $('#' + floorName).offset().top - 40
+		console.log(floorTop);
+    $('html,body')
+      .stop()
+      .animate(
+        {
+          scrollTop: floorTop
+        },
+        800,
+        'linear',
+        function () {
+          setTimeout(function () {
+            isClick = false;
+          },800)
+        }
+      )
+  })
 
   //==============================监听页面滚动事件================================
   // $(window).scroll(function() {
