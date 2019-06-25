@@ -552,9 +552,9 @@ body {
     color: rgba(255, 255, 255, 0.8);
   }
   .frontEndContainer .mainContent {
-    width: 900px;
+    width: 1080px;
     padding: 30px;
-    margin-left: 22%;
+    margin-left: 16%;
   }
   .frontEndContainer .mainContent .contentBox {
     background-color: #fff;
@@ -576,7 +576,7 @@ body {
     border-radius: 6px;
     background: #fff;
     padding: 10px;
-    width: 230px;
+    width: 220px;
     min-width: 200px;
     margin: 22px 22px 0 0;
     float: left;
