@@ -2,55 +2,34 @@ window.isClick = false
 
 $(function() {
 	// 左侧导航栏
-	$.fn.ssMenu = function (options) {
+	// function ssMenu(options) {
 
-		var setting = $.extend({
-			theme: "default", //put the name of theme in string       
-			hideOnScroll: false, //true to hide menu while scroll down 
-			additionalCSS: ({
-				'background': '', //custom background color
-				'color': '', //custom text color 
-				'boxShadow': '', //to add box shadow 
-				'textShadow': '', //to add text shadow 
-			}),
-		}, options);
+	// 	return this.each(function () {
+	// 		var target = $(this);
+	// 		var ssMenu = $(".navBar");
+	// 		var Triggers = $(ssMenu).find("li");
+	// 		// $(Window).click(function (e) {
+	// 		// 	if ($(e.target).closest(Triggers).length) {
+	// 		// 		return;
+	// 		// 	}
+	// 		// 	$(ssMenu).removeClass("open");
+	// 		// });
+	// 		// if (setting.hideOnScroll == true) {
+	// 		// 	$(window).scroll(function () {
+	// 		// 		if ($(this).scrollTop() > 50) {
+	// 		// 			$(ssMenu).removeClass("show").addClass("hide");
+	// 		// 		} else {
+	// 		// 			$(ssMenu).removeClass("hide").addClass("show");
+	// 		// 		}
+	// 		// 	});
+	// 		// }
+	// 	});
+	// };
 
-		return this.each(function () {
-			var target = $(this);
-			var ssMenu = $(".navBar");
-			var Triggers = $(ssMenu).find("li");
-			//Applying customizations 
-			$(target).addClass(setting.theme);
-			$(target).css(setting.additionalCSS);
-			$(ssMenu).mouseenter(function () {
-				//to avoid the adding classes again and again 
-				if ($(ssMenu).hasClass("open")) {
-					return;
-				}
-				$(ssMenu).addClass("open");
-			});
-			$(Window).click(function (e) {
-				if ($(e.target).closest(Triggers).length) {
-					return;
-				}
-				$(ssMenu).removeClass("open");
-			});
-			if (setting.hideOnScroll == true) {
-				$(window).scroll(function () {
-					if ($(this).scrollTop() > 50) {
-						$(ssMenu).removeClass("show").addClass("hide");
-					} else {
-						$(ssMenu).removeClass("hide").addClass("show");
-					}
-				});
-			}
-		});
-	};
-
-	// 监听左侧导航栏事件
-	$(document).ready(function () {
-    $(".navBar").ssMenu();
-	});
+	// // 监听左侧导航栏事件
+	// $(document).ready(function () {
+  //   $(".navBar").ssMenu();
+	// });
 
 
 	// ===========================页面加载进度条==============================
@@ -60,6 +39,7 @@ $(function() {
 	// ============================数据请求业务===============================
   $.getJSON(
     './data/db.json',
+    // 'https://github.com/Kelvin4869/FrontEndNav/blob/master/data/db.json',
     res => {
 			console.log(res);
 			// 页面渲染

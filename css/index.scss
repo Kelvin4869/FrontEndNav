@@ -9,217 +9,1172 @@ body {
   -webkit-overflow-scrolling: touch;
   font-family: PingFangSC-Regular, Helvetica Neue, Microsoft Yahei, 微软雅黑;
 }
-.frontEndContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // 左侧导航栏
-  .leftNavBar {
-    // display: none;
-    .navBar {
-      font-family: 'Helvetica Neue';
-      font-style: normal;
-      font-weight: 300;
-      font-smoothing: antialiased;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      position: fixed;
-      // z-index: 999;
+
+@media (min-width: 481px) {
+  .frontEndContainer {
+    // 左侧导航栏
+    .leftNavBar {
       top: 0;
       left: 0;
-      width: 50px;
-      height: 100%;
-      /* for zombiles browsers*/
-      height: 100vh;
-      overflow-y: scroll;
-      // float: left;
-    }
-
-    /*滚动条样式*/
-    .navBar::-webkit-scrollbar {
-      width: 4px;
-    }
-    .navBar::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-      background: rgba(0,0,0,0.2);
-    }
-    .navBar::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-      border-radius: 0;
-      background: rgba(0,0,0,0.1);
-    }
-
-    .navBar.open {
-      width: 230px;
-    }
-    
-    .navBar.hide {
-      left: -60px;
-    }
-    
-    .navBar.show {
-      left: 0;
-    }
-  
-    ul {
-      li {
-        white-space: nowrap;
-        border-radius: 0 30px 30px 0;
-        margin: 0 10px 0 0;
-        overflow: hidden;
-        cursor: pointer;
-        a {
-          color: #ffffff;
-          /* For older browsers */
-          color: rgba(255, 255, 255, 0.85);
-          text-decoration: none;
-          -webkit-tap-highlight-color: transparent;
-          padding: 15px 10px;
-          display: block;
-          border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
-          // font-size: 14px;
-          vertical-align: center;
-        }
-        a:hover {
-          text-indent: 4px;
-          color: rgba(255, 255, 255, 0.85);
-        }
-        .fa {
-          margin: 0 6px;
-          color: rgba(255, 255, 255, 0.70);
-          font-size: 22px;
-        }
+      .navBar {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 300;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: fixed;
+        float: left;
+        top: 0;
+        left: 0;
+        width: 230px;
+        // height: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: #0e3248;
       }
-      li:hover {
-        background: rgba(0, 0, 0, 0.3);
-        .fa {
-          color: rgba(255, 255, 255, 0.8);
-        }
-      }
-    }
   
-    .navBar.default {
-      background: #0e3248;
+      /*滚动条样式*/
+      .navBar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .navBar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      .navBar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    
       ul {
-        li:hover {
-          background: #e00032;
-          .fa {
-            color: rgba(255, 255, 255, 0.40);
-          }
-        }
-      }
-    }
-  
-    .ss-badge {
-      width: 16px;
-      height: 16px;
-      background: #e41b17;
-      color: #fff;
-      border-radius: 50%;
-      display: inline-block;
-      font-size: 12px;
-      text-align: center;
-      position: absolute;
-    }
-  
-    .navBar,
-    .navBar.open,
-    .navBar ul li,
-    .navBar ul li a,
-    .navBar ul li:hover,
-    .navBar ul li a:hover {
-      transition: .3s all;
-      -webkit-transition: .3s all;
-      -moz-transition: .3s all;
-    }
-  }
-
-  // 主要内容
-  .mainContent {
-    // width: 100%;
-    // margin-left: 60px;
-    width: 1220px;
-    padding: 30px;
-    // padding-right: 0;
-    .contentBox {
-      // width: 70%;
-      background-color: #fff;
-      padding: 20px;
-      padding-right: 0;
-      margin-bottom: 20px;
-      // padding-right: 0;
-      // display: flex;
-      // justify-content: space-around;
-      // align-items: center;
-      .boxTitle {
-        font-size: 20px;
-      }
-      .boxContent {
-        display: flex;
-        // justify-content: space-around;
-        // align-items: center;
-        flex-wrap: wrap;
-        .boxItem {
-          border-radius: 6px;
-          background: #fff;
-          padding: 10px;
-          width: 250px;
-          min-width: 200px;
-          // margin: 22px 0 0 2.1%;
-          margin: 22px 22px 0 0;
-          float: left;
+        li {
+          white-space: nowrap;
+          border-radius: 0 30px 30px 0;
+          margin: 0 10px 0 0;
           overflow: hidden;
-          border: 1px solid #e4ecf3;
-          box-shadow: 1px 2px 3px #f2f6f8;
+          cursor: pointer;
           a {
+            color: #ffffff;
+            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
-            .logo {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              img {
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-              }
-              .itemTitle {
-                margin-left: 10px;
-                font-size: 15px;
-                font-weight: bolder;
-                color: #3273dc;
-              }
-            }
-            .itemDes {
-              color: gray;
-              font-size: 12px;
-              line-height: 17px;
-              padding: 10px 0; 
-              height: 44px;
-              // 两行注释
-              overflow: hidden;
-              text-overflow: ellipsis;
-              text-overflow: -o-ellipsis-lastline;
-              display: -webkit-box;
-              -webkit-line-clamp: 3;
-              line-clamp: 2;
-              -webkit-box-orient: vertical;
-            }
+            -webkit-tap-highlight-color: transparent;
+            padding: 15px 10px;
+            display: block;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+            vertical-align: center;
+          }
+          a:hover {
+            text-indent: 4px;
+            color: rgba(255, 255, 255, 0.85);
+          }
+          .fa {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 22px;
           }
         }
-        .boxItem:hover {
-          transform: translateY(-6px);
-          -webkit-transform: translateY(-6px);
-          -moz-transform: translateY(-6px);
-          box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
-          -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
-          -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
-          transition: all 0.3s ease;
+        li:hover {
+          background: rgba(0, 0, 0, 0.3);
+          .fa {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+  
+    }
+  
+    // 主要内容
+    .mainContent {
+      // z-index: 0;
+      width: 400px;
+      padding: 30px;
+      margin-left: 220px;
+      .contentBox {
+        background-color: #fff;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px;
+        .boxTitle {
+          font-size: 20px;
+        }
+        .boxContent {
+          display: flex;
+          flex-wrap: wrap;
+          .boxItem {
+            border-radius: 6px;
+            background: #fff;
+            padding: 10px;
+            width: 100%;
+            min-width: 200px;
+            margin: 22px 22px 0 0;
+            float: left;
+            overflow: hidden;
+            border: 1px solid #e4ecf3;
+            box-shadow: 1px 2px 3px #f2f6f8;
+            a {
+              text-decoration: none;
+              .logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                }
+                .itemTitle {
+                  margin-left: 10px;
+                  font-size: 15px;
+                  font-weight: bolder;
+                  color: #3273dc;
+                }
+              }
+              .itemDes {
+                color: gray;
+                font-size: 12px;
+                line-height: 17px;
+                padding: 10px 0; 
+                height: 44px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-overflow: -o-ellipsis-lastline;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+          .boxItem:hover {
+            transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            -moz-transform: translateY(-6px);
+            box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            transition: all 0.3s ease;
+          }
         }
       }
     }
+    /* 底部 */
+    // .footer {
+    //   // position: fixed;
+    //   width: 100%;
+    //   bottom: 0;
+    //   background-color: #fff;
+    //   text-align: center;
+    // }
+  
+    /* 返回顶部 */
+    // .goTop {
+    //   display: block;
+    //   height: 40px;
+    //   width: 40px;
+    //   border-radius: 50%;
+    //   position: fixed;
+    //   bottom: 50px;
+    //   right: 10px;
+    //   overflow: hidden;
+    //   text-indent: 100%;
+    //   white-space: nowrap;
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   -webkit-transition: all 0.3s;
+    //   -moz-transition: all 0.3s;
+    //   transition: all 0.3s; 
+    //   z-index: 1000;
+  
+    //   &.btn-is-visible {
+    //     /* 按钮可见 */
+    //     visibility: visible;
+    //     opacity: 1;
+    //   }
+    //   &.btn-fade-out {
+    //     /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+    //     opacity: .5;
+    //   } 
+    //   img{
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
   }
 }
+@media (min-width: 768px) {
+  .frontEndContainer {
+    // 左侧导航栏
+    .leftNavBar {
+      top: 0;
+      left: 0;
+      .navBar {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 300;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: fixed;
+        float: left;
+        top: 0;
+        left: 0;
+        width: 230px;
+        // height: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: #0e3248;
+      }
+  
+      /*滚动条样式*/
+      .navBar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .navBar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      .navBar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    
+      ul {
+        li {
+          white-space: nowrap;
+          border-radius: 0 30px 30px 0;
+          margin: 0 10px 0 0;
+          overflow: hidden;
+          cursor: pointer;
+          a {
+            color: #ffffff;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            padding: 15px 10px;
+            display: block;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+            vertical-align: center;
+          }
+          a:hover {
+            text-indent: 4px;
+            color: rgba(255, 255, 255, 0.85);
+          }
+          .fa {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 22px;
+          }
+        }
+        li:hover {
+          background: rgba(0, 0, 0, 0.3);
+          .fa {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+  
+    }
+  
+    // 主要内容
+    .mainContent {
+      // z-index: 0;
+      width: 700px;
+      padding: 30px;
+      margin-left: 220px;
+      .contentBox {
+        background-color: #fff;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px;
+        .boxTitle {
+          font-size: 20px;
+        }
+        .boxContent {
+          display: flex;
+          flex-wrap: wrap;
+          .boxItem {
+            border-radius: 6px;
+            background: #fff;
+            padding: 10px;
+            width: 280px;
+            min-width: 200px;
+            margin: 22px 22px 0 0;
+            float: left;
+            overflow: hidden;
+            border: 1px solid #e4ecf3;
+            box-shadow: 1px 2px 3px #f2f6f8;
+            a {
+              text-decoration: none;
+              .logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                }
+                .itemTitle {
+                  margin-left: 10px;
+                  font-size: 15px;
+                  font-weight: bolder;
+                  color: #3273dc;
+                }
+              }
+              .itemDes {
+                color: gray;
+                font-size: 12px;
+                line-height: 17px;
+                padding: 10px 0; 
+                height: 44px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-overflow: -o-ellipsis-lastline;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+          .boxItem:hover {
+            transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            -moz-transform: translateY(-6px);
+            box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+    /* 底部 */
+    // .footer {
+    //   // position: fixed;
+    //   width: 100%;
+    //   bottom: 0;
+    //   background-color: #fff;
+    //   text-align: center;
+    // }
+  
+    /* 返回顶部 */
+    // .goTop {
+    //   display: block;
+    //   height: 40px;
+    //   width: 40px;
+    //   border-radius: 50%;
+    //   position: fixed;
+    //   bottom: 50px;
+    //   right: 10px;
+    //   overflow: hidden;
+    //   text-indent: 100%;
+    //   white-space: nowrap;
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   -webkit-transition: all 0.3s;
+    //   -moz-transition: all 0.3s;
+    //   transition: all 0.3s; 
+    //   z-index: 1000;
+  
+    //   &.btn-is-visible {
+    //     /* 按钮可见 */
+    //     visibility: visible;
+    //     opacity: 1;
+    //   }
+    //   &.btn-fade-out {
+    //     /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+    //     opacity: .5;
+    //   } 
+    //   img{
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
+  }
+}
+@media (min-width: 1040px) {
+  .frontEndContainer {
+    // 左侧导航栏
+    .leftNavBar {
+      top: 0;
+      left: 0;
+      .navBar {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 300;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: fixed;
+        float: left;
+        top: 0;
+        left: 0;
+        width: 230px;
+        // height: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: #0e3248;
+      }
+  
+      /*滚动条样式*/
+      .navBar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .navBar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      .navBar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    
+      ul {
+        li {
+          white-space: nowrap;
+          border-radius: 0 30px 30px 0;
+          margin: 0 10px 0 0;
+          overflow: hidden;
+          cursor: pointer;
+          a {
+            color: #ffffff;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            padding: 15px 10px;
+            display: block;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+            vertical-align: center;
+          }
+          a:hover {
+            text-indent: 4px;
+            color: rgba(255, 255, 255, 0.85);
+          }
+          .fa {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 22px;
+          }
+        }
+        li:hover {
+          background: rgba(0, 0, 0, 0.3);
+          .fa {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+  
+    }
+  
+    // 主要内容
+    .mainContent {
+      // z-index: 0;
+      width: 800px;
+      padding: 30px;
+      margin-left: 22%;
+      .contentBox {
+        background-color: #fff;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px;
+        .boxTitle {
+          font-size: 20px;
+        }
+        .boxContent {
+          display: flex;
+          flex-wrap: wrap;
+          .boxItem {
+            border-radius: 6px;
+            background: #fff;
+            padding: 10px;
+            width: 200px;
+            min-width: 200px;
+            margin: 22px 22px 0 0;
+            float: left;
+            overflow: hidden;
+            border: 1px solid #e4ecf3;
+            box-shadow: 1px 2px 3px #f2f6f8;
+            a {
+              text-decoration: none;
+              .logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                }
+                .itemTitle {
+                  margin-left: 10px;
+                  font-size: 15px;
+                  font-weight: bolder;
+                  color: #3273dc;
+                }
+              }
+              .itemDes {
+                color: gray;
+                font-size: 12px;
+                line-height: 17px;
+                padding: 10px 0; 
+                height: 44px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-overflow: -o-ellipsis-lastline;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+          .boxItem:hover {
+            transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            -moz-transform: translateY(-6px);
+            box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+    /* 底部 */
+    // .footer {
+    //   // position: fixed;
+    //   width: 100%;
+    //   bottom: 0;
+    //   background-color: #fff;
+    //   text-align: center;
+    // }
+  
+    /* 返回顶部 */
+    // .goTop {
+    //   display: block;
+    //   height: 40px;
+    //   width: 40px;
+    //   border-radius: 50%;
+    //   position: fixed;
+    //   bottom: 50px;
+    //   right: 10px;
+    //   overflow: hidden;
+    //   text-indent: 100%;
+    //   white-space: nowrap;
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   -webkit-transition: all 0.3s;
+    //   -moz-transition: all 0.3s;
+    //   transition: all 0.3s; 
+    //   z-index: 1000;
+  
+    //   &.btn-is-visible {
+    //     /* 按钮可见 */
+    //     visibility: visible;
+    //     opacity: 1;
+    //   }
+    //   &.btn-fade-out {
+    //     /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+    //     opacity: .5;
+    //   } 
+    //   img{
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
+  }
+}
+@media (min-width: 1200px) {
+  .frontEndContainer {
+    // 左侧导航栏
+    .leftNavBar {
+      top: 0;
+      left: 0;
+      .navBar {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 300;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: fixed;
+        float: left;
+        top: 0;
+        left: 0;
+        width: 230px;
+        // height: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: #0e3248;
+      }
+  
+      /*滚动条样式*/
+      .navBar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .navBar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      .navBar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    
+      ul {
+        li {
+          white-space: nowrap;
+          border-radius: 0 30px 30px 0;
+          margin: 0 10px 0 0;
+          overflow: hidden;
+          cursor: pointer;
+          a {
+            color: #ffffff;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            padding: 15px 10px;
+            display: block;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+            vertical-align: center;
+          }
+          a:hover {
+            text-indent: 4px;
+            color: rgba(255, 255, 255, 0.85);
+          }
+          .fa {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 22px;
+          }
+        }
+        li:hover {
+          background: rgba(0, 0, 0, 0.3);
+          .fa {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+  
+    }
+  
+    // 主要内容
+    .mainContent {
+      // z-index: 0;
+      width: 900px;
+      padding: 30px;
+      margin-left: 22%;
+      .contentBox {
+        background-color: #fff;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px;
+        .boxTitle {
+          font-size: 20px;
+        }
+        .boxContent {
+          display: flex;
+          flex-wrap: wrap;
+          .boxItem {
+            border-radius: 6px;
+            background: #fff;
+            padding: 10px;
+            width: 230px;
+            min-width: 200px;
+            margin: 22px 22px 0 0;
+            float: left;
+            overflow: hidden;
+            border: 1px solid #e4ecf3;
+            box-shadow: 1px 2px 3px #f2f6f8;
+            a {
+              text-decoration: none;
+              .logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                }
+                .itemTitle {
+                  margin-left: 10px;
+                  font-size: 15px;
+                  font-weight: bolder;
+                  color: #3273dc;
+                }
+              }
+              .itemDes {
+                color: gray;
+                font-size: 12px;
+                line-height: 17px;
+                padding: 10px 0; 
+                height: 44px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-overflow: -o-ellipsis-lastline;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+          .boxItem:hover {
+            transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            -moz-transform: translateY(-6px);
+            box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+    /* 底部 */
+    // .footer {
+    //   // position: fixed;
+    //   width: 100%;
+    //   bottom: 0;
+    //   background-color: #fff;
+    //   text-align: center;
+    // }
+  
+    /* 返回顶部 */
+    // .goTop {
+    //   display: block;
+    //   height: 40px;
+    //   width: 40px;
+    //   border-radius: 50%;
+    //   position: fixed;
+    //   bottom: 50px;
+    //   right: 10px;
+    //   overflow: hidden;
+    //   text-indent: 100%;
+    //   white-space: nowrap;
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   -webkit-transition: all 0.3s;
+    //   -moz-transition: all 0.3s;
+    //   transition: all 0.3s; 
+    //   z-index: 1000;
+  
+    //   &.btn-is-visible {
+    //     /* 按钮可见 */
+    //     visibility: visible;
+    //     opacity: 1;
+    //   }
+    //   &.btn-fade-out {
+    //     /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+    //     opacity: .5;
+    //   } 
+    //   img{
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
+  }
+}
+@media (min-width: 1400px) {
+  .frontEndContainer {
+    // 左侧导航栏
+    .leftNavBar {
+      top: 0;
+      left: 0;
+      .navBar {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 300;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: fixed;
+        float: left;
+        top: 0;
+        left: 0;
+        width: 230px;
+        // height: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: #0e3248;
+      }
+  
+      /*滚动条样式*/
+      .navBar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .navBar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      .navBar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    
+      ul {
+        li {
+          white-space: nowrap;
+          border-radius: 0 30px 30px 0;
+          margin: 0 10px 0 0;
+          overflow: hidden;
+          cursor: pointer;
+          a {
+            color: #ffffff;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            padding: 15px 10px;
+            display: block;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+            vertical-align: center;
+          }
+          a:hover {
+            text-indent: 4px;
+            color: rgba(255, 255, 255, 0.85);
+          }
+          .fa {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 22px;
+          }
+        }
+        li:hover {
+          background: rgba(0, 0, 0, 0.3);
+          .fa {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+  
+    }
+  
+    // 主要内容
+    .mainContent {
+      // z-index: 0;
+      width: 900px;
+      padding: 30px;
+      margin-left: 24%;
+      .contentBox {
+        background-color: #fff;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px;
+        .boxTitle {
+          font-size: 20px;
+        }
+        .boxContent {
+          display: flex;
+          flex-wrap: wrap;
+          .boxItem {
+            border-radius: 6px;
+            background: #fff;
+            padding: 10px;
+            width: 230px;
+            margin: 22px 22px 0 0;
+            float: left;
+            overflow: hidden;
+            border: 1px solid #e4ecf3;
+            box-shadow: 1px 2px 3px #f2f6f8;
+            a {
+              text-decoration: none;
+              .logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                }
+                .itemTitle {
+                  margin-left: 10px;
+                  font-size: 15px;
+                  font-weight: bolder;
+                  color: #3273dc;
+                }
+              }
+              .itemDes {
+                color: gray;
+                font-size: 12px;
+                line-height: 17px;
+                padding: 10px 0; 
+                height: 44px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-overflow: -o-ellipsis-lastline;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+          .boxItem:hover {
+            transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            -moz-transform: translateY(-6px);
+            box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+    /* 底部 */
+    // .footer {
+    //   // position: fixed;
+    //   width: 100%;
+    //   bottom: 0;
+    //   background-color: #fff;
+    //   text-align: center;
+    // }
+  
+    /* 返回顶部 */
+    // .goTop {
+    //   display: block;
+    //   height: 40px;
+    //   width: 40px;
+    //   border-radius: 50%;
+    //   position: fixed;
+    //   bottom: 50px;
+    //   right: 10px;
+    //   overflow: hidden;
+    //   text-indent: 100%;
+    //   white-space: nowrap;
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   -webkit-transition: all 0.3s;
+    //   -moz-transition: all 0.3s;
+    //   transition: all 0.3s; 
+    //   z-index: 1000;
+  
+    //   &.btn-is-visible {
+    //     /* 按钮可见 */
+    //     visibility: visible;
+    //     opacity: 1;
+    //   }
+    //   &.btn-fade-out {
+    //     /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+    //     opacity: .5;
+    //   } 
+    //   img{
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
+  }
+}
+@media (min-width: 1700px) {
+  .frontEndContainer {
+    // 左侧导航栏
+    .leftNavBar {
+      top: 0;
+      left: 0;
+      .navBar {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 300;
+        font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: fixed;
+        float: left;
+        top: 0;
+        left: 0;
+        width: 230px;
+        // height: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        background-color: #0e3248;
+      }
+  
+      /*滚动条样式*/
+      .navBar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .navBar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+      }
+      .navBar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+      }
+    
+      ul {
+        li {
+          white-space: nowrap;
+          border-radius: 0 30px 30px 0;
+          margin: 0 10px 0 0;
+          overflow: hidden;
+          cursor: pointer;
+          a {
+            color: #ffffff;
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            padding: 15px 10px;
+            display: block;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+            vertical-align: center;
+          }
+          a:hover {
+            text-indent: 4px;
+            color: rgba(255, 255, 255, 0.85);
+          }
+          .fa {
+            margin: 0 6px;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 22px;
+          }
+        }
+        li:hover {
+          background: rgba(0, 0, 0, 0.3);
+          .fa {
+            color: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+  
+    }
+  
+    // 主要内容
+    .mainContent {
+      // z-index: 0;
+      width: 1220px;
+      padding: 30px;
+      margin-left: 22%;
+      .contentBox {
+        background-color: #fff;
+        padding: 20px;
+        padding-right: 0;
+        margin-bottom: 20px;
+        .boxTitle {
+          font-size: 20px;
+        }
+        .boxContent {
+          display: flex;
+          flex-wrap: wrap;
+          .boxItem {
+            border-radius: 6px;
+            background: #fff;
+            padding: 10px;
+            width: 250px;
+            min-width: 200px;
+            margin: 22px 22px 0 0;
+            float: left;
+            overflow: hidden;
+            border: 1px solid #e4ecf3;
+            box-shadow: 1px 2px 3px #f2f6f8;
+            a {
+              text-decoration: none;
+              .logo {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                img {
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                }
+                .itemTitle {
+                  margin-left: 10px;
+                  font-size: 15px;
+                  font-weight: bolder;
+                  color: #3273dc;
+                }
+              }
+              .itemDes {
+                color: gray;
+                font-size: 12px;
+                line-height: 17px;
+                padding: 10px 0; 
+                height: 44px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                text-overflow: -o-ellipsis-lastline;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+              }
+            }
+          }
+          .boxItem:hover {
+            transform: translateY(-6px);
+            -webkit-transform: translateY(-6px);
+            -moz-transform: translateY(-6px);
+            box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -webkit-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            -moz-box-shadow: 0 26px 40px -24px rgba(0, 36, 100, 0.3);
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+    /* 底部 */
+    // .footer {
+    //   // position: fixed;
+    //   width: 100%;
+    //   bottom: 0;
+    //   background-color: #fff;
+    //   text-align: center;
+    // }
+  
+    /* 返回顶部 */
+    // .goTop {
+    //   display: block;
+    //   height: 40px;
+    //   width: 40px;
+    //   border-radius: 50%;
+    //   position: fixed;
+    //   bottom: 50px;
+    //   right: 10px;
+    //   overflow: hidden;
+    //   text-indent: 100%;
+    //   white-space: nowrap;
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   -webkit-transition: all 0.3s;
+    //   -moz-transition: all 0.3s;
+    //   transition: all 0.3s; 
+    //   z-index: 1000;
+  
+    //   &.btn-is-visible {
+    //     /* 按钮可见 */
+    //     visibility: visible;
+    //     opacity: 1;
+    //   }
+    //   &.btn-fade-out {
+    //     /* 如果用户继续向下滚动,这个按钮的透明度会变得更低 */
+    //     opacity: .5;
+    //   } 
+    //   img{
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
+  }
+}
+
+
 
 
 /*清除浮动*/
