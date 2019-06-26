@@ -38,8 +38,8 @@ $(function() {
 
 	// ============================数据请求业务===============================
   $.getJSON(
-    './data/db.json',
-    // 'https://github.com/Kelvin4869/FrontEndNav/blob/master/data/db.json',
+    // './data/db.json',
+    'https://raw.githubusercontent.com/Kelvin4869/FrontEndNav/master/data/db.json',
     res => {
 			console.log(res);
 			// 页面渲染

@@ -46,6 +46,8 @@
   <link rel="shortcut icon" href="img/logo.ico"/>
   <!-- 字体图标 -->
   <link rel="stylesheet" href="font/iconfont.css">
+  <!-- 页面加载进度条 -->
+  <link rel="stylesheet" href="css/nprogress.css">
   <!-- 页面样式 -->
   <link rel="stylesheet" href="css/index.css">
 </head>
@@ -82,7 +84,7 @@
                 <div class="boxItem">
                   <a href="{{value.a_href}}" target="_blank">
                     <div class="logo">
-                      <img src="{{value.img_src}}">
+                      <img width="100%" class="loaded" data-echo="{{value.img_src}}" src="./img/loading.gif">
                       <span class="itemTitle">{{value.child_name}}</span>
                     </div>
                     <div class="itemDes">{{value.child_desc}}</div>

@@ -708,9 +708,9 @@ body {
     color: rgba(255, 255, 255, 0.8);
   }
   .frontEndContainer .mainContent {
-    width: 900px;
+    width: 1120px;
     padding: 30px;
-    margin-left: 24%;
+    margin-left: 18%;
   }
   .frontEndContainer .mainContent .contentBox {
     background-color: #fff;
