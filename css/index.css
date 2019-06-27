@@ -12,6 +12,156 @@ body {
   font-family: PingFangSC-Regular, Helvetica Neue, Microsoft Yahei, 微软雅黑;
 }
 
+@media (max-width: 480px) {
+  .frontEndContainer {
+    padding: 12px;
+    /* 底部 */
+    /* 返回顶部 */
+  }
+  .frontEndContainer .leftNavBar {
+    display: none;
+    width: 200px;
+    /*滚动条样式*/
+  }
+  .frontEndContainer .leftNavBar .navBar {
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 300;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: fixed;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #0e3248;
+  }
+  .frontEndContainer .leftNavBar .navBar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .frontEndContainer .leftNavBar .navBar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .frontEndContainer .leftNavBar .navBar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .frontEndContainer .leftNavBar ul li {
+    white-space: nowrap;
+    border-radius: 0 30px 30px 0;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .frontEndContainer .leftNavBar ul li a {
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    padding: 15px 10px;
+    display: block;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.05);
+    vertical-align: center;
+  }
+  .frontEndContainer .leftNavBar ul li a:hover {
+    text-indent: 4px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .frontEndContainer .leftNavBar ul li .fa {
+    margin: 0 6px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+  }
+  .frontEndContainer .leftNavBar ul li:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .frontEndContainer .leftNavBar ul li:hover .fa {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .frontEndContainer .mainContent {
+    width: 100%;
+  }
+  .frontEndContainer .mainContent .contentBox {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .frontEndContainer .mainContent .contentBox .boxTitle {
+    font-size: 16px;
+  }
+  .frontEndContainer .mainContent .contentBox .boxContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .frontEndContainer .mainContent .contentBox .boxContent .boxItem {
+    border-radius: 6px;
+    background: #fff;
+    padding: 8px;
+    width: 42%;
+    margin: 10px 4px 0 0;
+    float: left;
+    overflow: hidden;
+    border: 1px solid #e4ecf3;
+    -webkit-box-shadow: 1px 2px 3px #f2f6f8;
+            box-shadow: 1px 2px 3px #f2f6f8;
+  }
+  .frontEndContainer .mainContent .contentBox .boxContent .boxItem a {
+    text-decoration: none;
+  }
+  .frontEndContainer .mainContent .contentBox .boxContent .boxItem a .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .frontEndContainer .mainContent .contentBox .boxContent .boxItem a .logo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  .frontEndContainer .mainContent .contentBox .boxContent .boxItem a .logo .itemTitle {
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: bolder;
+    color: #3273dc;
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .frontEndContainer .mainContent .contentBox .boxContent .boxItem a .itemDes {
+    color: gray;
+    font-size: 12px;
+    padding: 10px 0 0 0;
+    display: inline-block;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 @media (min-width: 481px) {
   .frontEndContainer {
     /* 底部 */
